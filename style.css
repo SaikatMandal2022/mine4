@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    /* Add this */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#timer {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#reset-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+    background-color: #45a049;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.cell:hover {
+    background-color: #d5d5d5;
+}
+
+.cell.revealed {
+    background-color: #fff;
+}
+
+.cell.bomb {
+    background-color: red;
+    color: white;
+}
+
+.cell.flag {
+    background-color: yellow;
+    color: black;
+    font-size: 1.5em;
+    /* Increase flag size */
+}
+
+#congratulations {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Background effect when user wins */
+body.winner {
+    background: url('your_congratulations_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Existing styles here... */
+
+#congratulations {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Background effect when user wins */
+body.winner {
+    background: url('your_congratulations_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#leaderboard {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#leaderboard-list {
+    list-style: none;
+    padding: 0;
+}
+
+#leaderboard-form {
+    margin-top: 10px;
+}
+
+#leaderboard-form input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#leaderboard-form button {
+    padding: 5px;
+}
